@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
@@ -17,12 +17,12 @@ export default {
   components: {
     HelloWorld
   },
-  data () {
+  data() {
     return {
       list: []
     }
   },
-  mounted () {
+  mounted() {
     requestAllModule({ tenantId: '20d3c93d-11e1-41a4-915a-7cf28043392b' }).then(res => {
       this.list = res.data.menu.concat(res.data.global)
       setTimeout(() => {
